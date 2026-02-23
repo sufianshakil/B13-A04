@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Job Application Tracker</title>
+
+ <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-[#F5F7FA] font-sans">
+
+<div class="max-w-6xl mx-auto py-10 px-4">
+
+
+<h1 class="text-3xl font-bold text-[#1E293B] mb-8">
+  Job Application Tracker
+</h1>
+
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+
+  <div class="bg-white rounded-lg p-6 shadow-sm border">
+    <p class="text-gray-500 text-sm">Total</p>
+    <h2 id="totalCount" class="text-2xl font-bold text-[#1E293B]">8</h2>
+  </div>
+
+  <div class="bg-white rounded-lg p-6 shadow-sm border">
+    <p class="text-gray-500 text-sm">Interview</p>
+    <h2 id="interviewCount" class="text-2xl font-bold text-green-600">0</h2>
+  </div>
+
+  <div class="bg-white rounded-lg p-6 shadow-sm border">
+    <p class="text-gray-500 text-sm">Rejected</p>
+    <h2 id="rejectedCount" class="text-2xl font-bold text-red-600">0</h2>
+  </div>
+
+</div>
+
+
+
+<div class="bg-white rounded-lg border shadow-sm">
+
+ 
+  <div class="flex justify-between items-center px-6 py-4 border-b">
+    <h2 class="text-lg font-semibold text-[#1E293B]">
+      Available Jobs
+    </h2>
+    <p id="tabCount" class="text-sm text-gray-500">
+      8 jobs
+    </p>
+  </div>
+
+  <!-- Tabs -->
+  <div class="px-6 py-4 flex gap-3 border-b">
+    <button onclick="switchTab('all')" 
+      id="allTab"
+      class="tabBtn px-4 py-2 text-sm rounded bg-blue-600 text-white">
+      All
+    </button>
+
+    <button onclick="switchTab('interview')" 
+      id="interviewTab"
+      class="tabBtn px-4 py-2 text-sm rounded bg-gray-100 text-gray-600">
+      Interview
+    </button>
+
+    <button onclick="switchTab('rejected')" 
+      id="rejectedTab"
+      class="tabBtn px-4 py-2 text-sm rounded bg-gray-100 text-gray-600">
+      Rejected
+    </button>
+  </div>
+
+  
+  <div id="jobContainer" class="divide-y">
+    
+
+  </div>
+
+</div>
+
+</div>
+
+<script src="script.js">
+
+
+</script>
+
+</body>
+</html>
